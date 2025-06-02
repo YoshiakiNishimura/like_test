@@ -1,3 +1,4 @@
+val scala3Version = "3.7.0"
 val tsurugiVersion = "1.9.0"
 
 lazy val root = project
