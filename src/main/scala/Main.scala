@@ -47,7 +47,7 @@ private val Connect = "ipc://tsurugi"
 private val TableName = "like_table"
 private val ColumnString = "(id int primary key, name varchar)"
 private val inputString = "abcdefghijklmnop"
-private val Columncount = 10
+private val Columncount = 10_000_000
 
 def sqlExecute(
     kvs: KvsClient,
