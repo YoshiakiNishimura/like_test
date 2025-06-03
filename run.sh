@@ -5,8 +5,11 @@
 # if first run
 # sbt run
 echo "test begin"
+
 echo "default"
 time tgsql --exec -c ipc:tsurugi -t RTX --with PARALLEL=1 "select count(id) from like_table" ;
+echo "length"
+time tgsql --exec -c ipc:tsurugi -t RTX --with PARALLEL=1 "select count(char_length(name)) from like_table" ;
 echo "a%"
 time tgsql --exec -c ipc:tsurugi -t RTX --with PARALLEL=1 "select count(id) from like_table WHERE name LIKE 'a%' " ;
 echo "%p"
